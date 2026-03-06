@@ -67,7 +67,7 @@ public class BillIngestionRoute extends RouteBuilder {
 
         // ── REST DSL config ────────────────────────────────────────────────
         restConfiguration()
-                .component("servlet")
+                .component("platform-http")
                 .bindingMode(RestBindingMode.json)
                 .dataFormatProperty("prettyPrint", "true")
                 .enableCORS(true)
