@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: finbridge-config
+  namespace: default
+data:
+  spring.profiles.active: "prod"
+  aws.region: "us-east-1"
