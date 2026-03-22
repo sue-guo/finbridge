@@ -9,20 +9,20 @@ on:
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
-    services:
-      postgres:
-        image: postgres:16-alpine
-        env:
-          POSTGRES_DB: finbridge_test
-          POSTGRES_USER: finbridge
-          POSTGRES_PASSWORD: finbridge
-        options: >-
-          --health-cmd pg_isready
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-        ports:
-          - 5432:5432
+#    services:
+#      postgres:
+#        image: postgres:16-alpine
+#        env:
+#          POSTGRES_DB: finbridge_test
+#          POSTGRES_USER: finbridge
+#          POSTGRES_PASSWORD: finbridge
+#        options: >-
+#          --health-cmd pg_isready
+#          --health-interval 10s
+#          --health-timeout 5s
+#          --health-retries 5
+#        ports:
+#          - 5432:5432
 
     steps:
       - uses: actions/checkout@v4
